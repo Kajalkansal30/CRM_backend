@@ -54,6 +54,16 @@ app.use('/api/segments', require('./routes/segments'));
 app.use('/api/campaigns', require('./routes/campaigns'));
 app.use('/api/communicationLog', require('./routes/communicationLog'));
 
+// Add root route handler to respond to GET /
+app.get('/', (req, res) => {
+  res.send('Mini CRM Backend API is running');
+});
+
+// Add favicon route handler to avoid 404 errors
+app.get('/favicon.ico', (req, res) => {
+  res.status(204).end();
+});
+
 // Error Handling Middleware
 app.use(notFound);
 app.use(errorHandler);
