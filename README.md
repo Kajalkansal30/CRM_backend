@@ -1,7 +1,9 @@
 # Mini CRM Backend
+
 This is the backend service for the Mini CRM application. It is built with Node.js, Express, and MongoDB.
 
 ## Features
+
 - User authentication with Passport.js and JWT
 - Google OAuth 2.0 authentication
 - RESTful API endpoints for managing customers, orders, segments, campaigns, and communication logs
@@ -10,11 +12,13 @@ This is the backend service for the Mini CRM application. It is built with Node.
 - Integration with Google Generative AI and OpenAI clients for advanced features
 
 ## Prerequisites
+
 - Node.js (v16 or higher recommended)
 - MongoDB instance (local or cloud)
 - Environment variables configured (see below)
 
 ## Environment Variables
+
 Create a `.env` file in the `mini-crm/backend` directory with the following variables:
 
 ```
@@ -27,6 +31,7 @@ JWT_SECRET=your_jwt_secret
 ```
 
 ## Installation
+
 1. Navigate to the backend directory:
 
 ```bash
@@ -91,6 +96,31 @@ The backend uses MongoDB with Mongoose ODM. The connection is established in `co
 - Ensure environment variables are set in your deployment environment.
 - Use `npm start` to run the server.
 - Common deployment platforms: Heroku, AWS Elastic Beanstalk, DigitalOcean, etc.
+
+## Architecture Diagram
+
+*Placeholder for architecture diagram.*
+
+(Add an architecture diagram image or link here if available.)
+
+## Summary of AI Tools and Other Technologies Used
+
+- AI Tools:
+  - OpenAI API (via `openaiClient.js`)
+  - Google Generative AI Client (via `googleGenerativeAIClient.js`)
+- Backend Technologies:
+  - Node.js
+  - Express
+  - MongoDB with Mongoose
+  - Passport.js for authentication
+  - JWT for token management
+
+## Known Limitations or Assumptions
+
+- The backend requires a properly configured MongoDB instance.
+- Environment variables must be correctly set for authentication and database connection.
+- Some API endpoints may require additional permissions or roles.
+- Error handling and logging are basic and may need enhancement for production use.
 
 ## Contributing
 
